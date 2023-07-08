@@ -20,7 +20,7 @@ function extractVideoId(url) {
 }
 
 // Endpoint to retrieve YouTube thumbnail
-app.post("/grab", async (req, res) => {
+app.post("/api/v1/thumbnail", async (req, res) => {
 	const { url } = req.body
 
 	// Extract video ID from the YouTube URL

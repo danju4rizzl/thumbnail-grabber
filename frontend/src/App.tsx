@@ -15,7 +15,7 @@ function App() {
 
 		try {
 			const response = await axios.post(
-				`http://localhost:5000/grab`,
+				`http://localhost:5000/api/v1/thumbnail`,
 				{ url: urlInput },
 				{
 					headers: {
