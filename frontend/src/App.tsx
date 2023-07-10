@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react"
 import axios from "axios"
+import "./App.css"
 
 function App() {
 	const [urlInput, setUrlInput] = useState("")
@@ -23,7 +24,7 @@ function App() {
 					}
 				}
 			)
-			setImageData(response.data)
+			setImageData(response.data as string)
 			setUrlInput("")
 		} catch (err) {
 			console.log(err)
@@ -33,24 +34,40 @@ function App() {
 	}
 
 	return (
-		<main className="">
-			<nav className="">
-				<h5 className="">Thumbnail Downloader</h5>
+		<div>
+			<nav className="navigation">
+				<h5 className="navigation__title">Thumbnail Downloader</h5>
 			</nav>
-			<p>Download thumbnails from any YouTube video</p>
-			<form onSubmit={handleSubmit}>
-				<input
-					type="url"
-					placeholder="Enter YouTube video URL"
-					onChange={(e) => setUrlInput(e.target.value)}
-					value={urlInput}
-				/>
-				<button type="submit">Get Thumbnail Image</button>
-			</form>
+			<main className="main">
+				<h3 className="title">Download thumbnails from any YouTube video</h3>
+				<form onSubmit={handleSubmit} className="form">
+					<input
+						type="url"
+						placeholder="Enter YouTube video URL"
+						onChange={(e) => setUrlInput(e.target.value)}
+						value={urlInput}
+						className="form__input"
+					/>
+					<button type="submit" className="btn">
+						Get thumbnail
+					</button>
+				</form>
 
-			<img src={imgData} alt="" width={700} />
-			<button>Download thumbnail</button>
-		</main>
+				<div className="display">
+					<img src={imgData} alt="" width={700} className="display__img" />
+					{imgData && (
+						<a
+							href={imgData}
+							target="_blank"
+							rel="noreferrer"
+							className="display__link"
+						>
+							<button className="btn">Download thumbnail</button>
+						</a>
+					)}
+				</div>
+			</main>
+		</div>
 	)
 }
 

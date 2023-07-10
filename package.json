@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "server": "node src/index.js",
+    "frontend": "node dev /frontend",
+    "start": "concurrently \"pnpm dev\" \"pnpm frontend ",
     "dev": "nodemon src/index.js"
   },
   "keywords": [
@@ -19,7 +21,10 @@
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
     "nodemon": "^2.0.22"
   }
 }
