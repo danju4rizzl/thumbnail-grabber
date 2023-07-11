@@ -6,6 +6,9 @@ function App() {
 	const [urlInput, setUrlInput] = useState("")
 	const [imgData, setImageData] = useState<string>("")
 
+	// const baseUrl = `${process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/"}`
+	const baseUrl = `https://yt-thumbnail-graber-v1.onrender.com`
+
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault()
 		console.log(urlInput)
@@ -16,7 +19,7 @@ function App() {
 
 		try {
 			const response = await axios.post(
-				`http://localhost:5000/api/v1/thumbnail`,
+				`${baseUrl}api/v1/thumbnail`,
 				{ url: urlInput },
 				{
 					headers: {

@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  intro.js:
+    specifier: ^7.0.1
+    version: 7.0.1
+  intro.js-react:
+    specifier: ^1.0.0
+    version: 1.0.0(intro.js@7.0.1)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1410,6 +1416,20 @@ packages:
 
   /inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+
+  /intro.js-react@1.0.0(intro.js@7.0.1)(react@18.2.0):
+    resolution: {integrity: sha512-zR8pbTyX20RnCZpJMc0nuHBpsjcr1wFkj3ZookV6Ly4eE/LGpFTQwPsaA61Cryzwiy/tTFsusf4hPU9NpI9UOg==}
+    peerDependencies:
+      intro.js: '>=2.5.0'
+      react: '>=0.14.0'
+    dependencies:
+      intro.js: 7.0.1
+      react: 18.2.0
+    dev: false
+
+  /intro.js@7.0.1:
+    resolution: {integrity: sha512-1oqz6aOz9cGQ3CrtVYhCSo6AkjnXUn302kcIWLaZ3TI4kKssRXDwDSz4VRoGcfC1jN+WfaSJXRBrITz+QVEBzg==}
+    dev: false
 
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
