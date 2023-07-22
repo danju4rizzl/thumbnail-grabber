@@ -6,8 +6,13 @@ function App() {
 	const [urlInput, setUrlInput] = useState("")
 	const [imgData, setImageData] = useState<string>("")
 
-	// const baseUrl = `${process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/"}`
-	const baseUrl = `https://yt-thumbnail-graber-v1.onrender.com`
+	const baseUrl = `${
+		import.meta.env.MODE === "development"
+			? "http://localhost:5000/"
+			: "https://yt-thumbnail-graber-v1.onrender.com"
+	}`
+
+	// const baseUrl = `https://yt-thumbnail-graber-v1.onrender.com`
 
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault()
