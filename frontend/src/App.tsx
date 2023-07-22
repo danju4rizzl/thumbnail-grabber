@@ -9,8 +9,11 @@ function App() {
 	const baseUrl = `${
 		import.meta.env.MODE === "development"
 			? "http://localhost:5000/"
-			: "https://yt-thumbnail-graber-v1.onrender.com"
+			: "https://yt-thumbnail-graber-v1.onrender.com/"
 	}`
+
+	console.log("Environment: ", import.meta.env.MODE)
+	console.log("baseUrl: ", baseUrl)
 
 	// const baseUrl = `https://yt-thumbnail-graber-v1.onrender.com`
 
