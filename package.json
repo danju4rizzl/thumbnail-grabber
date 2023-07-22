@@ -6,8 +6,6 @@
   "type": "module",
   "scripts": {
     "server": "node src/index.js",
-    "frontend": "node dev /frontend",
-    "start": "concurrently \"pnpm dev\" \"pnpm frontend ",
     "dev": "nodemon src/index.js"
   },
   "keywords": [
@@ -25,7 +23,6 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0",
     "nodemon": "^3.0.1"
   }
 }
