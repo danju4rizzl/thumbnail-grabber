@@ -12,14 +12,9 @@ function App() {
 			: "https://yt-thumbnail-graber-v1.onrender.com/"
 	}`
 
-	console.log("Environment: ", import.meta.env.MODE)
-	console.log("baseUrl: ", baseUrl)
-
-	// const baseUrl = `https://yt-thumbnail-graber-v1.onrender.com`
-
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault()
-		console.log(urlInput)
+		// console.log(urlInput)
 		if (urlInput.length === 0) {
 			alert("Please enter a valid URL")
 			return
@@ -47,7 +42,8 @@ function App() {
 	return (
 		<div>
 			<nav className="navigation">
-				<h5 className="navigation__title">Thumbnail Downloader</h5>
+				<img src="/logo.png" alt="site logo" width={"24"} />
+				<h5 className="navigation__title">Thumbnail Downloader </h5>
 			</nav>
 			<main className="main">
 				<h3 className="title">Download thumbnails from any YouTube video</h3>

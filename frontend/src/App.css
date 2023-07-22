@@ -1,6 +1,9 @@
 /* Styles for the navigation */
 .navigation {
 	padding: 1rem 5rem;
+	display: flex;
+	align-items: center;
+	gap: 3px;
 }
 
 .navigation__title {
